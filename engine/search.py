@@ -3,6 +3,7 @@
 import requests
 
 def call_api(a1, a2):
+    '''calls the movies api'''
     name = a1.replace(" ", "+")
     url = "http://www.theimdbapi.org/api/find/person?name={}".format(name)
     results = requests.get(url)

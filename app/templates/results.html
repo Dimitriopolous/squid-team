@@ -37,6 +37,25 @@
 	      </div>
 	    </form>
 	  </div>
+	  <div class="bottomhalf">
+            <section class="bottom_half">
+	      <div class="bottom_half">
+		<h2>Results</h2>
+	      </div>
+	      <div class="articles">
+		<article>
+		  <!-- <div class="article_title">
+		       <h3>Actor 1</h3>
+		  </div> -->
+		  {% for movie in movie_list %}
+		  <LI>{{ movie.actor }} -> {{ movie.movies }} -> {{ movie.target }}</LI>
+		  {% endfor %}
+		  <!-- <div class="article_title">
+		       <h3>Actor 2</h3>
+		  </div> -->
+		</article>
+	      </div>
+          </div>
           <footer class="footer" style="padding-top: 40px">
 	    <div class="container text-center">
 	      <a href="https://www.facebook.com/squidsearch/" class="fa fa-facebook"></a>

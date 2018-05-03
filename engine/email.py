@@ -22,8 +22,9 @@ class Email():
     def __init__(self, *args, **kwargs):
         ''' This will initiate an email object instance. '''
         self.id = str(uuid.uuid4())
-        if "first_name" not in kwargs:
-            print("First name required")
+        if "first_name" not in kwargs or "last_name" not in kwargs or "email"
+        not in kwargs:
+            return True
         for key, value in kwargs.items():
             setattr(self, key, value)
 

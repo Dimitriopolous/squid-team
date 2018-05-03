@@ -10,7 +10,7 @@ from search import *
 def read_input():
     ''' Read and write to JSON file'''
     with open('../actors.json', 'r') as f:
-        data = json.loads(f)
+        data = json.load(f)
         actor1 = data['actor1']
         actor2 = data['actor2']
 
@@ -18,6 +18,7 @@ def read_input():
 
     with open('../result.json', 'w') as f:
         json.dump(result, f)
+
 
 if __name__ == "__main__":
     read_input()

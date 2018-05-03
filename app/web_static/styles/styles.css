@@ -13,31 +13,6 @@ div {
     margin-bottom: 30px;
 }
 
-.upperhalf {
-    background-color: white;
-    height: 70px;
-    width: 100%;
-    border: solid 1px #DDDDDD;
-    border-radius: 4px;
-    text-align: center;
-}
-
-.leftbox {
-    text-align: left;
-    height: 100%;
-    width: 25%;
-    border-right: solid 1px #DDDDDD;
-    float: center;
-}
-
-.rightbox{
-    text-align: left;
-    align-content: flex-start;
-    height: 100%;
-    width: 25%;
-    float: center;
-}
-
-.submitbutton{
-    text-align: center;
+form {
+    display: block;
 }

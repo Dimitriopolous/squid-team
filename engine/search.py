@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-'''implementation of the engine'''
+'''implementation of the engine to get information about actors'''
 import requests
 
 def call_api(a1, a2):
-    '''calls the movies api'''
+    '''calls the movies api to get the actors and movies'''
     name = a1.replace(" ", "+")
     url = "http://www.theimdbapi.org/api/find/person?name={}".format(name)
     results = requests.get(url)

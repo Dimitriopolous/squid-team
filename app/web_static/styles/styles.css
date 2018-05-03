@@ -19,7 +19,7 @@ div {
     width: 100%;
     border: solid 1px #DDDDDD;
     border-radius: 4px;
-    text-align: right;
+    text-align: center;
 }
 
 .leftbox {
@@ -27,7 +27,7 @@ div {
     height: 100%;
     width: 25%;
     border-right: solid 1px #DDDDDD;
-    float: left;
+    float: center;
 }
 
 .rightbox{
@@ -35,5 +35,9 @@ div {
     align-content: flex-start;
     height: 100%;
     width: 25%;
-    float: left;
+    float: center;
+}
+
+.submitbutton{
+    text-align: center;
 }

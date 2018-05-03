@@ -40,6 +40,28 @@ def call_api(a1, a2):
     else:
         print ("nothing")
 
+def get_movies(actor):
+    ''' 
+        Function takes an actor name
+        and returns all the movies the actors is in
+    '''
+
+    name = actor.replace(" ", "+")
+    url = "http://www.theimdbapi.org/api/find/person?name={}".format(name)
+    results = requests.get(url)
+    contents = results.json()[0]
+    try:
+        films = contents["filmography"]["actor"]
+    except KeyError:
+        films = contents["filmography"]["actress"]
+
+    list_films = {}
+    for movie in films:
+        if movie["type"] == "Film":
+            list_films[movie["title"]] = movie["imdb_id"]
+    return (list_films)
+
+
 if __name__ == "__main__":
     call_api("brad pitt", "angelina jolie")
     call_api("Meryl Streep","Daniel Day Lewis")

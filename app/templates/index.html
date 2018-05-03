@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+    <head>
+      <title>Squid Team</title>
+	  <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet">
+	  <!-- <script src="{{ url_for('static', filename='js/index.js') }}"></script> -->
+    </head>
+    <body>
+        <header>
+	  <a href="https://imgur.com/CJ9bLiy"><img src="https://i.imgur.com/CJ9bLiy.png" title="source: imgur.com" /></a>
+        </header>
+        <div class="container">
+	  <div class="upperhalf">
+		  <form action="/data" method="post">
+	      <p>Actor 1:</p>
+	      <input type="text" name="a1">
+	      <p>Actor 2:</p>
+	      <input type="text" name="a2" align="right">
+		  <input type="submit" value="GO">
+	    </form>
+	  </div>
+		
+	  <div class="bottomhalf">
+          <section class="bottom_half">
+	    <div class="bottom_half">
+	      <h2>Results</h2>
+	      </div>
+	    <div class="articles">
+	      <article>
+
+		{% for path in movie_list %}
+		<p>{{ path.name1 }}</p><p>{{ path.movie[0] }}</p><p>{{ path.name2 }}</p>
+		{% endfor %}
+
+	      </article>
+	  </div>
+        </div>
+        <footer class="footer" style="padding-top: 40px">
+	  <div class="container text-center">
+	    <a href="https://www.facebook.com/squidsearch/" class="fa fa-facebook"></a>
+	    <a href="https://twitter.com/SearchSquid" class="fa fa-twitter"></a>
+	  </div>
+        </footer>
+    </body>
+</html>

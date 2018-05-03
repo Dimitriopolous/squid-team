@@ -1,3 +1,7 @@
 body {
     background-color: red;
 }
+
+#actorsearch form input {
+    vertical-align: middle;
+}

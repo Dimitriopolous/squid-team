@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, jsonify
 import json
 app = Flask(__name__, static_url_path='/static')
 
@@ -13,6 +13,15 @@ def hello_world():
     except json.decoder.JSONDecodeError:
         res = "This is not a json"
     return render_template('index.html', movie_list=res)
+
+@app.route('/data', methods=['POST'])
+def handle_data():
+    a1 = str(request.form['a1'])
+    a2 = str(request.form['a2'])
+    with open('../actors.json', "w") as f:
+        a_dict = { "actor1": a1, "actor2": a2 }
+        json.dump(a_dict, f)
+    return redirect('/')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')

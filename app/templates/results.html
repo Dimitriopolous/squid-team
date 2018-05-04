@@ -47,8 +47,8 @@
 		  <!-- <div class="article_title">
 		       <h3>Actor 1</h3>
 		  </div> -->
-		  {% for movie in movie_list %}
-		  <LI>{{ movie.actor }} -> {{ movie.movies }} -> {{ movie.target }}</LI>
+		  {% for path in movie_list %}
+		  <LI>{{ path.name1 }} -> {{ path.movie[0] }} -> {{ path.name2 }}</LI>
 		  {% endfor %}
 		  <!-- <div class="article_title">
 		       <h3>Actor 2</h3>

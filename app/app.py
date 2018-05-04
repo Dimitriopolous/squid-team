@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, redirect, jsonify
 import json
+from engine.r_w import *
+import time
 app = Flask(__name__, static_url_path='/static')
 
 @app.route('/')
@@ -18,14 +20,16 @@ def handle_data():
 @app.route('/result')
 def display_result():
     res = []
+    read_input()
+    time.sleep(10)
     try:
         with open("../result.json", 'r') as f:
-            res = json.load(f)
+            res.append(json.load(f))
     except FileNotFoundError:
         res = { "error": "File Not Found" }
     except json.decoder.JSONDecodeError:
         res = "This is not a json"
-    return render_template('results.html', movie_list=res
+    return render_template('results.html', movie_list=res)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')

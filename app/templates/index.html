@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
+<<<<<<< HEAD:app/templates/index.html
       <title>Squid Team</title>
       <link rel="stylesheet" href="styles.css">
 	  <script src="./index.js"></script>
@@ -8,9 +9,28 @@
     <body>
         <header>
 	  		<a href="https://imgur.com/CJ9bLiy"><img src="https://i.imgur.com/CJ9bLiy.png" title="source: imgur.com" /></a>
+=======
+      <title>Squit Team</title>
+      <link rel="stylesheet" href="./styles/styles.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+	  <div class="container">
+	  <div class="row">
+	    <div class="span4"></div>
+	    <div class="span4"><img class="center-block" src="https://i.imgur.com/CJ9bLiy.png" /></div>
+	    <div class="span4"></div>
+	  </div>
+>>>>>>> 21c558b78150d9e7de7e4bc1a9e154c3dab34f15:app/web_static/index.html
         </header>
-        <div class="wrapper">
+        <div class="container">
 	  <div class="upperhalf">
+<<<<<<< HEAD:app/templates/index.html
 	    <form onsubmit="submitVals()">
 	      <p>Actor 1:</p>
 	      <input type="text" name="actor1">
@@ -20,6 +40,24 @@
 	    </form>
 	  </div>
 
+=======
+	    <form class="form-inline" style="padding-top: 30px" action="/actionpage.php">
+	      <div class="form-group" style="padding-left: 230px">
+		<label for="">Actor 1:</label>
+		<input type="text" class="form-control" id="exampleInputName2" placeholder="">
+	      </div>
+	      <div class="form-group" style="padding-left: 30px">
+		<label for="exampleInputEmail2">Actor 2:</label>
+		<input type="text" class="form-control" id="exampleInputEmail2" placeholder="">
+	      </div>
+	      <div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+		  <button type="submit" class="btn btn-default">Submit</button>
+		</div>
+	      </div>
+	    </form>
+	  </div>
+>>>>>>> 21c558b78150d9e7de7e4bc1a9e154c3dab34f15:app/web_static/index.html
 	  <div class="bottomhalf">
           <section class="bottom_half">
 	    <div class="bottom_half">
@@ -35,8 +73,11 @@
 	      </article>
 	  </div>
         </div>
-        <footer>
-
+        <footer class="footer" style="padding-top: 40px">
+	  <div class="container text-center">
+	    <a href="https://www.facebook.com/squidsearch/" class="fa fa-facebook"></a>
+	    <a href="https://twitter.com/SearchSquid" class="fa fa-twitter"></a>
+	  </div>
         </footer>
     </body>
 </html>

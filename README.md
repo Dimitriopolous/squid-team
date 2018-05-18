@@ -4,7 +4,7 @@
 The Bacon number of an actor or actress is the number of degrees of separation (see Six degrees of separation) they have from actor Kevin Bacon, as defined by the game known as Six Degrees of Kevin Bacon.
 
 ## Description
-Instead of using Kevin Bacon, our website lets you put in any 2 actors and it finds how many links it takes to get to each other through the IMDb API. Currently supports up to 2 degrees.
+Instead of using Kevin Bacon, our website lets you put in any 2 actors and it finds how many links it takes to get to each other through the IMDb API.
 
 * JSON File Storage:
   * System to pass data back and forth between the front end and the back end.
@@ -33,3 +33,4 @@ git clone https://github.com/RoMalms10/squid-team.git
 
 ## Bugs
 * Only runs locally
+* Currently supports only up to 2 degrees.

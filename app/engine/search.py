@@ -20,7 +20,7 @@ def call_api(a1, a2):
             person_movies = get_movies(person['name'])
             result = compare(person_movies, mlist2, person['name'], a2)
             if result is not False:
-                lev1 = {"name1": a1, 
+                lev1 = {"name1": a1,
                         "movie": [movie],
                         "name2": person['name'],
                         "error": False}
@@ -33,7 +33,7 @@ def compare(list_films, list_films2, name, a2):
     ''' Compare set of two movies and check if there is common element '''
     if set(list_films2.keys()) & set(list_films.keys()):
         results = list(set(list_films2.keys()).intersection(list_films.keys()))
-        return {"name1": name, 
+        return {"name1": name,
                  "movie": results,
                  "name2": a2,
                  "error": False}
@@ -42,7 +42,7 @@ def compare(list_films, list_films2, name, a2):
 
 
 def get_movies(actor):
-    ''' 
+    '''
         Function takes an actor name
         and returns all the movies the actors is in
     '''
@@ -71,6 +71,6 @@ def get_actors(movie):
     return (contents)
 
 
-if __name__ == "__main__":
-    # call_api("brad pitt", "angelina jolie")
-    # r = call_api("Meryl Streep","Daniel Day Lewis")
+# if __name__ == "__main__":
+#     # call_api("brad pitt", "angelina jolie")
+#     # r = call_api("Meryl Streep","Daniel Day Lewis")

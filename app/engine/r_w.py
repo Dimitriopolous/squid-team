@@ -4,7 +4,7 @@
     and write result to result.json file
 '''
 import json
-from search import *
+from engine.search import *
 
 
 def read_input():
@@ -14,7 +14,9 @@ def read_input():
         actor1 = data['actor1']
         actor2 = data['actor2']
 
-    result = call_api('actor1', 'actor2')
+    # print("------", actor1)
+    # print("------", actor2)
+    result = call_api(actor1, actor2)
 
     with open('../result.json', 'w') as f:
         json.dump(result, f)
